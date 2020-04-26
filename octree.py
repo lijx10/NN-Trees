@@ -3,7 +3,7 @@ import math
 import numpy as np
 import time
 
-from nearest_neighbors.result_set import KNNResultSet, RadiusNNResultSet
+from result_set import KNNResultSet, RadiusNNResultSet
 
 
 class Octant:
@@ -254,7 +254,7 @@ def octree_construction(db_np, leaf_size, min_extent):
     db_np_min = np.amin(db_np, axis=0)
     db_np_max = np.amax(db_np, axis=0)
     db_extent = np.max(db_np_max - db_np_min) * 0.5
-    db_center = np.mean(db_np, axis=0)
+    db_center = db_np_min + db_extent
 
     root = None
     root = octree_recursive_build(root, db_np, db_center, db_extent, list(range(N)),

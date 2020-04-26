@@ -3,9 +3,9 @@ import math
 import numpy as np
 import time
 
-import nearest_neighbors.octree as octree
-import nearest_neighbors.kdtree as kdtree
-from nearest_neighbors.result_set import KNNResultSet, RadiusNNResultSet
+import octree as octree
+import kdtree as kdtree
+from result_set import KNNResultSet, RadiusNNResultSet
 
 
 def main():

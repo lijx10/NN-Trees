@@ -2,7 +2,7 @@ import random
 import math
 import numpy as np
 
-from nearest_neighbors.result_set import KNNResultSet, RadiusNNResultSet
+from result_set import KNNResultSet, RadiusNNResultSet
 
 
 class Node:
